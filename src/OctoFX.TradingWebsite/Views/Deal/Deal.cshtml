@@ -1,0 +1,41 @@
+@model OctoFX.TradingWebsite.Models.DealModel
+
+@{
+  ViewData["Title"] = "Your Quote";
+}
+
+<hgroup class="title">
+  <h1>@ViewData["Title"].</h1>
+</hgroup>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Spot quote</h3>
+  </div>
+  <div class="panel-body">
+          <div class="form-horizontal">
+
+            <div class="form-group">
+				<label asp-for="Quote.SellAmount" class="col-sm-2 control-label">I have (sell):</label>
+              <div class="col-sm-4">
+                <p class="form-control-static">@Model.Quote.SellBuyCurrencyPair.Sell @Model.Quote.SellAmount.ToString("n2")</p>
+              </div>
+            </div>
+            
+        <div class="form-group">
+			<label asp-for="Quote.BuyAmount" class="col-sm-2 control-label">I want (buy):</label>
+          <div class="col-sm-4">
+            <p class="form-control-static">@Model.Quote.SellBuyCurrencyPair.Buy @Model.Quote.BuyAmount.ToString("n2")</p>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Commit to deal</button>
+            <a asp-controller="Deal" asp-action="Quote" class="btn btn-link">Get another quote</a>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>

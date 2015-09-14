@@ -1,0 +1,59 @@
+@model OctoFX.TradingWebsite.Models.LoginModel
+
+@{
+  ViewData["Title"] = "Sign in";
+}
+
+<form asp-anti-forgery="true" asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" role="form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sign in</h3>
+    </div>
+    <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+    <div class="panel-body">
+      <div class="form-horizontal">
+        <div class="form-group">
+  			<label asp-for="Email" class="col-sm-2 control-label"></label>
+          <div class="col-sm-4">
+			     <input asp-for="Email" class="form-control"/>
+			     <span asp-validation-for="Email" class="text-danger"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+			   <label asp-for="Password" class="col-sm-2 control-label"></label>
+          <div class="col-sm-4">
+			     <input asp-for="Password" class="form-control" />
+			     <span asp-validation-for="Password" class="text-danger"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+				<input asp-for="RememberMe" />
+				<label asp-for="RememberMe"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <p>
+				      <a asp-action="Register">Register is you don't have an account.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>  
+
+@section Scripts {
+  @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

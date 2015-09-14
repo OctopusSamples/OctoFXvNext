@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0-*",
+  "description": "OctoFX.RateService",
+  "authors": ["OctoFX"],
+  "tags": ["OctoFX"],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Microsoft.Framework.DependencyInjection": "1.0.0-beta8-*",
+    "Autofac.Framework.DependencyInjection": "4.0.0-beta6-110",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta8-*",
+    "OctoFX.Core": "1.0.0-*"
+  },
+
+  "commands": {
+    "run": "OctoFX.RateService"
+  },
+
+  "frameworks": {
+    "dnxcore50": {}
+  }
+}

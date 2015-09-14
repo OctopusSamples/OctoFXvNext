@@ -1,0 +1,10 @@
+{
+  "Data": {
+	"OctoFXDatabase": {
+	  "ConnectionString": "#{OctoFXDatabase}"
+    }
+  },
+  "AppSettings": {
+    "SiteTitle": "OctoFX.TradingWebsite"
+  }
+}

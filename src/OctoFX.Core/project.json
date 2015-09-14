@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-*",
+  "description": "OctoFX.Core",
+  "authors": [
+    "OctoFX"
+  ],
+  "tags": [
+    "OctoFX"
+  ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "dependencies": {
+    "Microsoft.Framework.Configuration": "1.0.0-beta8-*",
+    "Microsoft.Framework.DependencyInjection": "1.0.0-beta8-*",
+    "Autofac.Framework.DependencyInjection": "4.0.0-beta6-110",
+    "Microsoft.AspNet.Cryptography.KeyDerivation": "1.0.0-beta8-*",
+    "EntityFramework.SqlServer": "7.0.0-beta8-*",
+    "EntityFramework.Commands": "7.0.0-beta8-*"
+  },
+  "frameworks": {
+    "dnx451": {},
+    "dnxcore50": {
+      "System.Security.Cryptography": ""
+    }
+  },
+  "commands": {
+    "ef": "EntityFramework.Commands"
+  }
+}
